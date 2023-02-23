@@ -1,0 +1,213 @@
+html { scroll-behavior: smooth; } 
+@font-face {
+  font-family: 'Questv1';
+  src: local('Questv1-Bold_0'),
+       local('Questv1 Bold 0'),
+        url("font/Questv1-Bold_0.otf") format("OpenType"),
+        url("font/Questv1-Bold_0.woff") format("woff"),
+        url("font/Questv1-Bold_0.woff2") format("woff2");
+}
+
+h3{
+  font-family: 'Questv1';
+}
+/* button (cm/inch) Style*/
+.buttonSwitch {
+  background-color: #FFFFFF; 
+  border: none;
+  color: black;
+  font-weight: normal;
+  padding: .75em;
+  text-align: center;
+  text-decoration: none;
+  display: block; 
+  font-size: 1vw;
+  outline:none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 90%;
+  margin-top: 1.5%;
+  text-decoration: underline;
+
+}
+.buttonSwitch:hover{
+    background-color: rgba(243, 206, 59, 0.50) !important ;
+}
+
+/* Tabs (normal/short-long/petite-plus) Style*/
+/* source (https://sharkcoder.com/blocks/tabs)*/
+.warpper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #DDB715;
+  display: inline-flex;
+  color: #fff;
+  border-radius: 3px 3px 0px 0px;
+  font-family: Questv1; 
+  font-size: small; 
+  font-size: 1vw; 
+
+}
+.tab:hover {
+  background: #F3CB3E;
+}
+
+.panels {
+  background: none;
+  min-height: 200px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 3px;
+  overflow: hidden;
+
+}
+
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.radio {
+  display: none;
+}
+/*women tap style */
+#wt1:checked ~ .panels #w_top,
+#wt2:checked ~ .panels #petite_top,
+#wt3:checked ~ .panels #plus_top,
+
+#wd1:checked ~ .panels #dress,
+#wd2:checked ~ .panels #petite_dress,
+#wd3:checked ~ .panels #plus_dress,
+
+#ws1:checked ~ .panels #skirt,
+#ws2:checked ~ .panels #petite_skirt,
+#ws3:checked ~ .panels #plus_skirt,
+
+#wp1:checked ~ .panels #pants,
+#wp2:checked ~ .panels #petite_pants,
+#wp3:checked ~ .panels #plus_pants,
+
+#mt1:checked ~ .panels #mtop,
+#mt2:checked ~ .panels #long_top,
+#mt3:checked ~ .panels #short_top,
+
+#mshr1:checked ~ .panels #mshirt,
+#mshr2:checked ~ .panels #long_shirt,
+#mshr3:checked ~ .panels #short_shirt,
+
+#mp1:checked ~ .panels #mpants,
+#mp2:checked ~ .panels #long_pants,
+#mp3:checked ~ .panels #short_pants,
+
+#mth1:checked ~ .panels #m_thoub,
+#mth2:checked ~ .panels #y_thoub,
+#mth3:checked ~ .panels #ch_thoub {
+   display: block;
+}
+#wt1:checked ~ .tabs #t_wt1,
+#wt2:checked ~ .tabs #t_wt2,
+#wt3:checked ~ .tabs #t_wt3,
+
+#wd1:checked ~ .tabs #t_wd1,
+#wd2:checked ~ .tabs #t_wd2,
+#wd3:checked ~ .tabs #t_wd3,
+
+#ws1:checked ~ .tabs #t_ws1,
+#ws2:checked ~ .tabs #t_ws2,
+#ws3:checked ~ .tabs #t_ws3,
+
+#wp1:checked ~ .tabs #t_wp1,
+#wp2:checked ~ .tabs #t_wp2,
+#wp3:checked ~ .tabs #t_wp3,
+
+#mt1:checked ~ .tabs #t_mt1,
+#mt2:checked ~ .tabs #t_mt2,
+#mt3:checked ~ .tabs #t_mt3,
+
+#mshr1:checked ~ .tabs #t_mshr1,
+#mshr2:checked ~ .tabs #t_mshr2,
+#mshr3:checked ~ .tabs #t_mshr3,
+
+#mp1:checked ~ .tabs #t_mp1,
+#mp2:checked ~ .tabs #t_mp2,
+#mp3:checked ~ .tabs #t_mp3,
+
+#mth1:checked ~ .tabs #t_mth1,
+#mth2:checked ~ .tabs #t_mth2,
+#mth3:checked ~ .tabs #t_mth3 {
+  background: #383836;
+  color: #FFFFFF;
+  border-right: 3px solid #F3BC3E;
+  border-left: 3px solid #F3BC3E;
+}
+
+.tableContainer{
+  min-height: 200px; 
+  max-width: 50% ;
+  width:100% ;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border-radius: 3px;
+  overflow: hidden;
+  animation: fadein 0.8s;
+
+}
+
+table {
+  font-family: Questv1;
+  border-collapse: collapse;
+  text-align: center;
+  width: auto ;
+  min-width: 50%;
+  background-color: none ;
+  font-size: 1vw;  
+}
+
+table th{
+  font-size: medium;
+  font-size: 1vw; 
+
+}
+table td, table th {
+  border: none;
+  padding: 0.25em;  
+}
+
+table tr:nth-child(even){
+  background-color: #FFFFFF;
+}
+table tr:nth-child(odd){
+  background-color: #DAD4D4;
+}
+
+table tr:hover {background-color:rgba(243, 206, 59, 0.40);}
+table td:hover {background-color:#F3CE3B; font-weight: bold;}
+
+
+table th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #383836;
+  color: white;
+}
+table td a {
+  text-decoration: underline;
+}
+
